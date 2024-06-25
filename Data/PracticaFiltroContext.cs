@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PracticaFiltro.Models;
 
 namespace PracticaFiltro.Data
 {
@@ -9,6 +10,6 @@ namespace PracticaFiltro.Data
 
         }
 
-        public DbSet<>
+        public DbSet<Student> Students { get; set; }
     }
 }

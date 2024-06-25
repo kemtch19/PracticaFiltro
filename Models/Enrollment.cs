@@ -34,11 +34,12 @@ namespace PracticaFiltro.Models
 
         [Column("StudentId")]
         [Required(ErrorMessage = "Possible null value for StudentId")]
-        public int StudentId { get; set; }
+        public int? studentId { get; set; }
+        public Student? Student { get; set; }
 
         [Column("CourseId")]
         [Required(ErrorMessage = "Possible null value for CourseId")]
-        public int? CourseId { get; set; }
+        public int? courseId { get; set; }
         public Course? Course { get; set; }
     }
 }

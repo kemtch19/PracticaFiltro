@@ -15,7 +15,7 @@ namespace PracticaFiltro.Services.Repository
 
         // Listamos todos los estudiantes a una interfaz
         public IEnumerable<Student> GetAll()
-        { /* es como una colección de un modelo que ya existe el IEnumerable */
+        { /* El IEnumerable es como una colección de un modelo que ya existe  */
             return _context.Students.ToList();
         }
 

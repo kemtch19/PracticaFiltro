@@ -3,6 +3,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PracticaFiltro.Data;
+using PracticaFiltro.Services.Interfaces;
+using PracticaFiltro.Services.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
