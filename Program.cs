@@ -1,6 +1,8 @@
 
 
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using PracticaFiltro.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -15,7 +17,12 @@ builder.Services.AddCors(Options=>{
 });
 
 // Configuración del servicio de la base de datos
-builder.Services.AddDbContext<>
+builder.Services.AddDbContext<PracticaFiltroContext>(Options =>
+    Options.UseMySql(builder.Configuration.GetConnectionString("PracticaFiltroDB"),
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
+
+// Creamos los Scopes de cada repository
+builder.Services.AddScoped<IStudentRepository, StudentRepository>(); /* con los scopes podemos conectar una interfaz con una clase y así poder implementarla en la API */
 
 var app = builder.Build();
 
@@ -27,5 +34,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Usamos los cors que previamente configuramos
+app.UseCors("AllowAnyOrigin");
+// Mapeamos todos los controladores
+app.MapControllers();
 
 app.Run();

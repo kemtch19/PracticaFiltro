@@ -15,10 +15,11 @@ namespace PracticaFiltro.Models
         [Required]
         public int Id {get; set;}
 
-        [Required(ErrorMessage = "Possible null reference bro")] /* Si este campo el usuario lo devuelve vacío le devuelve que campo le falta,  */
+        [Required(ErrorMessage = "Possible null field name")] /* Si este campo el usuario lo devuelve vacío le devuelve que campo le falta,  */
         [Column("Names")] /* Nos sirve para conectar a  conectar con la base de datos y facilitar mas adelante en la base de datos*/
         public string? Names {get; set; } /* Existe para que suponga que se le puede entregar un nulo, es decir, los warnings amarillos no aparezcan */
 
+    
         
     }
 }
