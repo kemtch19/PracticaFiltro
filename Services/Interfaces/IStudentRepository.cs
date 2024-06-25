@@ -7,6 +7,6 @@ namespace PracticaFiltro.Services.Interfaces
 {
     public interface IStudentRepository
     {
-        
+        public IEnumerable<Student> GetAll()
     }
 }
