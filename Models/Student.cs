@@ -34,5 +34,7 @@ namespace PracticaFiltro.Models
 
         [JsonIgnore]
         public List<Enrollment>? Enrollments {get; set; } /* Recordar que cuando la tabla solamente tiene un 1 hacemos la lista ya que vienen datos de otra tabla y que por el contrario en la otra tabla solamente almacenamos los id de las tablas que se tienen de a muchos    */
+
+        // donde pongo el objeto es donde va a llegar la info y donde pongo la lista es de donde van a salir los datos
     }
 }

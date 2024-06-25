@@ -20,15 +20,9 @@ namespace PracticaFiltro.Models
         [Required(ErrorMessage = "Possible null value for Date_enrollment")]
         public DateOnly? StudentId { get; set; }
 
-
-        public enum Status{
-            [Display(Name = "Pagado")]
-            Pagado,
-            [Display(Name = "Pendiente de Pago")]
-            PendienteDePago,
-            [Display(Name = "Cancelada")]
-            Cancelada
-        }
+        [Column("Status")]
+        [Required(ErrorMessage = "Possible null value for status code")]
+        public string? Status { get; set; }
 
         // Cuando la tabla es de muchos a muchos se debe de colocar solo los id de las llaves foraneas ya que en sus respectivas tablas se van a crear las listas para poder recibir los datos que vengan, además de que estoy trayendo un objeto de esa tabla y tiene todos los datos necesarios
 
