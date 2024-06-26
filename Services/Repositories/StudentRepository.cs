@@ -2,7 +2,7 @@ using PracticaFiltro.Data;
 using PracticaFiltro.Services.Interfaces;
 using PracticaFiltro.Models;
 
-namespace PracticaFiltro.Services.Repository
+namespace PracticaFiltro.Services.Repositories
 {
     public class StudentRepository : IStudentRepository
     {

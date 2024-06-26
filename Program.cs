@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PracticaFiltro.Data;
 using PracticaFiltro.Services.Interfaces;
-using PracticaFiltro.Services.Repository;
+using PracticaFiltro.Services.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -25,6 +25,7 @@ builder.Services.AddDbContext<PracticaFiltroContext>(Options =>
 
 // Creamos los Scopes de cada repository
 builder.Services.AddScoped<IStudentRepository, StudentRepository>(); /* con los scopes podemos conectar una interfaz con una clase y así poder implementarla en la API */
+builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
 
 var app = builder.Build();
 
