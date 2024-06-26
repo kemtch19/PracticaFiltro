@@ -43,7 +43,10 @@ INSERT INTO teachers(`Names`, `Specialty`, `Phone`, `Email`, `YearsExperience`) 
 INSERT INTO courses(`Name`, `Description`, `TeacherId`, `Schedule`, `Duration`, `Capacity`) VALUES
 ("Matemáticas", "Son matemáticas avanzadas junto con calculo", 2, "Martes a Jueves", "2 horas en la tarde", 20);
 
+INSERT INTO enrollments(`Date_enrollment`, `StudentId`, `CourseId`, `Status`) VALUES 
+("2012-02-03", 2, 1, "Pagada");
 
-SELECT * FROM courses;
+
+SELECT * FROM enrollments;
 
 SHOW TABLES;

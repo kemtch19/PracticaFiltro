@@ -13,16 +13,12 @@ namespace PracticaFiltro.Models
     {
         [Key]
         [Required]
-        [Column("id_enrollment")]
+        [Column("id_enrrollment")]
         public int Id { get; set; }
 
         [Column("Date_enrollment")]
         [Required(ErrorMessage = "Possible null value for Date_enrollment")]
         public DateOnly? StudentId { get; set; }
-
-        [Column("Status")]
-        [Required(ErrorMessage = "Possible null value for status code")]
-        public string? Status { get; set; }
 
         // Cuando la tabla es de muchos a muchos se debe de colocar solo los id de las llaves foraneas ya que en sus respectivas tablas se van a crear las listas para poder recibir los datos que vengan, además de que estoy trayendo un objeto de esa tabla y tiene todos los datos necesarios
 
@@ -35,5 +31,9 @@ namespace PracticaFiltro.Models
         [Required(ErrorMessage = "Possible null value for CourseId")]
         public int? courseId { get; set; }
         public Course? Course { get; set; }
+
+        [Column("Status")]
+        [Required(ErrorMessage = "Possible null value for status code")]
+        public string? Status { get; set; }
     }
 }

@@ -37,7 +37,8 @@ namespace PracticaFiltro.Controllers.Courses
             try
             {
                 var materia = _coursesRepository.GetOne(id);
-                if(materia == null){
+                if (materia == null)
+                {
                     return NotFound($"Error, curso no encontrado con el número de id: {id}");
                 }
                 return Ok(new { message = $"Esta es la materia que se obtuvo actualmente: \n Nombre: {materia.Name}", materia });
