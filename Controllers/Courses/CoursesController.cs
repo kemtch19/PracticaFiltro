@@ -18,12 +18,12 @@ namespace PracticaFiltro.Controllers.Courses
         }
 
         [HttpGet]
-        public IActionResult GetCourses()
+        public object GetCourses([FromQuery] int? page)
         {
             try
             {
-                var materias = _coursesRepository.GetAll();
-                return Ok(new { informacion = $"Estos son las materias que hay actualmente: {materias.Count()}", materias });
+                var materias = _coursesRepository.GetAll(page);
+                return Ok(new { informacion = $"Estos son las materias que hay actualmente: ", materias });
             }
             catch (Exception e)
             {

@@ -10,7 +10,7 @@ namespace PracticaFiltro.Controllers.Mail
 {
     public class MailController
     {
-        public async void SendEmail(string toEmail, string toName, string courseName, string courseDescription, string courseSchedule, int courseDuration, int courseCapacity, string courseTeacher, string courseStatus)
+        public async void SendEmail(string toEmail, string toName, string courseName, string courseDescription, string courseSchedule, string courseDuration, int? courseCapacity, string courseTeacher, string courseStatus)
         {   
             try
             {

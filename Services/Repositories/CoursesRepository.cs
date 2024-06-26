@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PracticaFiltro.Data;
 using PracticaFiltro.Models;
@@ -12,15 +13,29 @@ namespace PracticaFiltro.Services.Repositories
     public class CoursesRepository : ICoursesRepository
     {
         private readonly PracticaFiltroContext _context;
+        private readonly int records = 2;
         public CoursesRepository(PracticaFiltroContext context)
         {
             _context = context;
         }
 
-        public IEnumerable<Course> GetAll()
-        {
-            return _context.Courses.Include(t => t.Teacher).ToList();
-        }
+        public object GetAll([FromQuery] int? page)
+    {
+        int _page = page ?? 1;
+        decimal totalRecords = _context.Courses.Count();
+        int totalPages = Convert.ToInt32(Math.Ceiling(totalRecords / records));
+        
+        var cursos = _context.Courses
+            .Skip((_page - 1) * records)
+            .Take(records)
+            .ToList();
+    
+        var data = new { pages = totalPages,
+                        currentPage = _page,
+                        data = cursos};
+        
+        return data;
+    }
 
         public Course GetOne(int id)
         {

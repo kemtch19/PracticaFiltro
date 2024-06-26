@@ -36,7 +36,7 @@ namespace PracticaFiltro.Services.Repositories
             /* Luego de ello vamos a obtener los datos necesarios para pasarle al email y enviar el correo al que escojamos */
             var student = _context.Students.Find(enrollment.StudentId);
             var course = _context.Courses.Find(enrollment.CourseId);
-            var teacher = _context.Courses.Find(course.TeacherID);
+            var teacher = _context.Teachers.Find(course.TeacherID);
 
             /* Instanciamos el email */
             MailController Email = new MailController();
