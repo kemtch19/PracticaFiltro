@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PracticaFiltro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e698d0d1030d51988da9ebfdc68a886ddd21ca93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53b6365634430400c7913c7c317bf888034340df")]
 [assembly: System.Reflection.AssemblyProductAttribute("PracticaFiltro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PracticaFiltro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

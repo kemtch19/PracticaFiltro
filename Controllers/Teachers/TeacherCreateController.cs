@@ -18,14 +18,19 @@ namespace PracticaFiltro.Controllers.Teachers
             _teacherRepository = teacherRepository;
         }
         [HttpPost]
-        public ActionResult CreateTeacher(Teacher teacher){
-            if(teacher == null){
+        public ActionResult CreateTeacher(Teacher teacher)
+        {
+            if (teacher == null)
+            {
                 return BadRequest("Error, ingresaste datos nulos o diferentes en los campos asignados");
             }
-            try{
+            try
+            {
                 _teacherRepository.CreateTeacher(teacher);
-                return Ok(new {información =  $"Se ha creado correctamente el profesor {teacher.Names}", teacher});
-            }catch(Exception e){
+                return Ok(new { información = $"Se ha creado correctamente al profesor {teacher.Names}", teacher });
+            }
+            catch (Exception e)
+            {
                 return StatusCode(500, $"Error al crear el estudiante {e.Message}");
             }
         }

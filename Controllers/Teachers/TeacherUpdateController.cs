@@ -18,16 +18,16 @@ namespace PracticaFiltro.Controllers.Teachers
             _teacherRepository = teacherRepository;
         }
         [HttpPut("{Id}")]
-        public ActionResult UpdateTeacher(Teacher teacher)
+        public ActionResult UpdateTeacher(Teacher profe)
         {
-            if(teacher == null){
+            if(profe == null){
                 return BadRequest("Error, ingresaste datos nulos o diferentes en los campos asignados");
             }
             try{
-                _teacherRepository.UpdateTeacher(teacher);
-                return Ok(new {información =  $"Se ha actualizado correctamente el profesor {teacher.Names}", teacher});
+                _teacherRepository.UpdateTeacher(profe);
+                return Ok(new {información =  $"Se ha actualizado correctamente al profesor {profe.Names}", profe});
             }catch(Exception e){
-                return BadRequest($"El profesor{teacher.Names} tiene datos incorrectos: {e.Message}");
+                return BadRequest($"El profesor{profe.Names} tiene datos incorrectos: {e.Message}");
             }
         }
     }

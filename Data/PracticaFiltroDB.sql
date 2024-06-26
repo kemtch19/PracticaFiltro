@@ -1,4 +1,4 @@
--- Active: 1719362801108@@bo1467ift0bokyubooa4-mysql.services.clever-cloud.com@3306@bo1467ift0bokyubooa4
+-- Active: 1719377435251@@bo1467ift0bokyubooa4-mysql.services.clever-cloud.com@3306@bo1467ift0bokyubooa4
 CREATE TABLE students(
     id_student INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Names VARCHAR(125) NOT NULL,
@@ -41,6 +41,6 @@ INSERT INTO teachers(`Names`, `Specialty`, `Phone`, `Email`, `YearsExperience`) 
 ("Francisco", "Quimica", "31413213", "teacher@test.com", 2);DROP TABLE enrollments;
 
 
-SELECT * FROM teachers;SELECT * FROM teachers;
+SELECT * FROM students;
 
 SHOW TABLES;
