@@ -40,7 +40,10 @@ CREATE TABLE courses(
 INSERT INTO teachers(`Names`, `Specialty`, `Phone`, `Email`, `YearsExperience`) VALUES
 ("Francisco", "Quimica", "31413213", "teacher@test.com", 2);DROP TABLE enrollments;
 
+INSERT INTO courses(`Name`, `Description`, `TeacherId`, `Schedule`, `Duration`, `Capacity`) VALUES
+("Matemáticas", "Son matemáticas avanzadas junto con calculo", 2, "Martes a Jueves", "2 horas en la tarde", 20);
 
-SELECT * FROM students;
+
+SELECT * FROM courses;
 
 SHOW TABLES;

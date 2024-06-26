@@ -26,6 +26,7 @@ builder.Services.AddDbContext<PracticaFiltroContext>(Options =>
 // Creamos los Scopes de cada repository
 builder.Services.AddScoped<IStudentRepository, StudentRepository>(); /* con los scopes podemos conectar una interfaz con una clase y así poder implementarla en la API */
 builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
 
 var app = builder.Build();
 
