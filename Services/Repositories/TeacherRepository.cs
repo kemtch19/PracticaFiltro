@@ -9,7 +9,7 @@ using PracticaFiltro.Services.Interfaces;
 
 namespace PracticaFiltro.Services.Repositories
 {
-    public class TeacherRepository: ITeacherRepository
+    public class TeacherRepository : ITeacherRepository
     {
         private readonly PracticaFiltroContext _context;
         public TeacherRepository(PracticaFiltroContext context)
@@ -20,5 +20,22 @@ namespace PracticaFiltro.Services.Repositories
         {
             return _context.Teachers.ToList();
         }
+        public Teacher GetOne(int id)
+        {
+            return _context.Teachers.Find(id);
+        }
+
+        public void CreateTeacher(Teacher teacher)
+        {
+            _context.Teachers.Add(teacher);
+            _context.SaveChanges();
+        }
+
+        public void UpdateTeacher(Teacher teacher)
+        {
+            _context.Teachers.Update(teacher);
+            _context.SaveChanges();
+        }
+        
     }
 }

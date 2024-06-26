@@ -50,7 +50,7 @@ namespace PracticaFiltro.Controllers.Students
             }
             catch (Exception e)
             {
-                return BadRequest($"Error al obtener el estudiante de la base de datos, posiblemente no exista el estudiante con id: {id}");
+                return BadRequest($"Error al obtener el estudiante de la base de datos, posiblemente no exista el estudiante con id: {id} y el mensaje es: {e.Message}");
             }
         }
     }

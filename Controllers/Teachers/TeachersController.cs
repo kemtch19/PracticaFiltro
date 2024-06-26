@@ -30,5 +30,22 @@ namespace PracticaFiltro.Controllers.Teachers
                 return BadRequest($"Error al intentar encontrar a todos los profesores: \n {e.Message}");
             }
         }
+        [HttpGet("{Id}")]
+        public IActionResult GetTeacher(int id)
+        {
+            try
+            {
+                var teacher = _teacherRepository.GetOne(id);
+                if (teacher == null)
+                {
+                    return NotFound($"Error, profesor no encontrado con el número de id: {id}");
+                }
+                return Ok(new { message = $"Este es el profesor que se obtuvo actualmente: \n Nombre: {teacher.Names} \n Especialidad: {teacher.Specialty}", teacher });
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"Error al obtener el profesor de la base de datos, posiblemente no exista el profesor con id: {id} y el mensaje es: {e.Message}");
+            }
+        }
     }
 }
