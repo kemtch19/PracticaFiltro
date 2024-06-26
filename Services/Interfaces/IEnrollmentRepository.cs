@@ -9,5 +9,7 @@ namespace PracticaFiltro.Services.Interfaces
     public interface IEnrollmentRepository
     {
         public IEnumerable<Enrollment> GetAll();
+        public Enrollment GetOne(int id);
+        public void CreateEnrollment(Enrollment enrollment);
     }
 }

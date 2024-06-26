@@ -17,7 +17,7 @@ CREATE TABLE teachers(
 );
 
 CREATE TABLE enrollments(
-    id_enrrollment INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    id_enrollment INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Date_enrollment DATE NOT NULL,
     StudentId INT NOT NULL,
     CourseId INT NOT NULL,
@@ -45,7 +45,6 @@ INSERT INTO courses(`Name`, `Description`, `TeacherId`, `Schedule`, `Duration`, 
 
 INSERT INTO enrollments(`Date_enrollment`, `StudentId`, `CourseId`, `Status`) VALUES 
 ("2012-02-03", 2, 1, "Pagada");
-
 
 SELECT * FROM enrollments;
 
