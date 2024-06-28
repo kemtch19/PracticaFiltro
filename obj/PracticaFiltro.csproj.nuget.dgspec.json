@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/riwip5-011/Documents/PracticaFiltro/PracticaFiltro.csproj": {}
+    "/home/kemtch/Documentos/PracticaFiltro/PracticaFiltro.csproj": {}
   },
   "projects": {
-    "/home/riwip5-011/Documents/PracticaFiltro/PracticaFiltro.csproj": {
+    "/home/kemtch/Documentos/PracticaFiltro/PracticaFiltro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/riwip5-011/Documents/PracticaFiltro/PracticaFiltro.csproj",
+        "projectUniqueName": "/home/kemtch/Documentos/PracticaFiltro/PracticaFiltro.csproj",
         "projectName": "PracticaFiltro",
-        "projectPath": "/home/riwip5-011/Documents/PracticaFiltro/PracticaFiltro.csproj",
-        "packagesPath": "/home/riwip5-011/.nuget/packages/",
-        "outputPath": "/home/riwip5-011/Documents/PracticaFiltro/obj/",
+        "projectPath": "/home/kemtch/Documentos/PracticaFiltro/PracticaFiltro.csproj",
+        "packagesPath": "/home/kemtch/.nuget/packages/",
+        "outputPath": "/home/kemtch/Documentos/PracticaFiltro/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/riwip5-011/.nuget/NuGet/NuGet.Config"
+          "/home/kemtch/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
